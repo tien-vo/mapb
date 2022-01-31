@@ -35,6 +35,22 @@ data = mapb.SpacecraftData(trange, spacecraft=["A", "B"])
 Then, we can plot the time series loaded from CDAWeb for each spacecraft.
 Specify `save=True` if you wish to save figure into png files.
 ```
-data.plot_time_series("A")
+data.plot_time_series("A", save=True)
 ```
 ![Alt text](tests/sta_time_series.png?raw=true "Time series loaded from STA.")
+
+(a) The first panel shows 3 components of the spacecraft position in
+Cartesian Heliocentric coordinates. (b) The second panel shows the proton bulk
+speed. (c) The third panel shows the magnetic field in RTN coordinates. (d) The
+fourth panel shows the radial direction cosine of the velocity. (e) The last
+panel shows the coordinates of the calculated spiral footprints on the solar
+surface (traced back to 10 R_sun). (a) and (b) are necessary for the computation
+of (e). (c) is to check that the magnetic field follows the spiral geometry at
+the location of the spacecraft (not shown). (d) is to check the validity of the
+spiral calculations (the assumption is that the velocity is mostly radial).
+
+Similarly, for STEREO B,
+```
+data.plot_time_series("B", save=True)
+```
+![Alt text](tests/stb_time_series.png?raw=true "Time series loaded from STA.")
