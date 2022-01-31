@@ -30,7 +30,7 @@ def nearest_date(dates, date):
 
 class PlotProcedures:
 
-    def plot_time_series(self, sc):
+    def plot_time_series(self, sc, save=False):
         if sc not in self.sc:
             print(f"STEREO {sc}: Data not loaded.")
         else:
@@ -67,7 +67,9 @@ class PlotProcedures:
                 ax.tick_params(**_params)
                 ax.set_xlim(time[0], time[-1])
 
-    def plot_footprints(self):
+        if save: fig.savefig(f"st{sc.lower()}_time_series.png")
+
+    def plot_footprints(self, save=False):
 
         b = self.b
 
@@ -97,7 +99,9 @@ class PlotProcedures:
             ax.set_xlabel("Longitude (deg)")
             ax.set_ylabel("Latitude (deg)")
 
-    def plot_spirals(self, time=None):
+        if save: fig.savefig("footprints.png")
+
+    def plot_spirals(self, time=None, save=False):
 
         b = self.b
 
@@ -145,6 +149,8 @@ class PlotProcedures:
             ax.set_ylim(-1.2, 1.2)
             ax.set_xlabel("X HEEQ (AU)")
             ax.set_ylabel("Y HEEQ (AU)")
+
+        if save: fig.savefig(f"spirals_{time}.png")
 
     def show(self):
         plt.show()
