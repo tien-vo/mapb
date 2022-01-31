@@ -1,11 +1,6 @@
-import matplotlib.pyplot as plt
-import astropy.units as u
-import numpy as np
 import mapb
 
-
 trange = ["2010-01-01", "2011-01-01"]
-
 data = mapb.SpacecraftData(trange, spacecraft=["A", "B"])
 
 data.plot_time_series("A", save=True)
