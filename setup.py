@@ -10,14 +10,15 @@ setup(
     url="https://github.com/tien-vo/mapb.git",
     packages=find_packages(),
     python_requires=">=3.7,<3.10",
+    setup_requires=[
+        "numpy",
+    ],
     install_requires=[
-        "sunpy[all]",
         "astropy",
         "matplotlib",
-        "plasmapy",
-        "numpy",
-        "pyspedas",
-        "mpl_extras @ https://github.com/tien-vo/mpl_extras/archive/main.zip"
+        "datetime",
+        "spacepy",
+        "cdasws",
     ],
 )
 
