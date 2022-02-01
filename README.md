@@ -68,13 +68,13 @@ starting point in the time range if not specified).
 ```
 data.plot_spirals(save=True)
 ```
-![Alt text](tests/spirals_2010-01-01 05:00:00.png?raw=true "Spirals1.")
+![Alt text]('tests/spirals_2010-01-01 05:00:00.png'?raw=true "Spirals1.")
 
 Or, if specified, the string has to be in %Y-%m-%dT%H:%M:%S format.
 ```
 data.plot_spirals(time="2010-02-01T01:00:00", save=True)
 ```
-![Alt text](tests/spirals_2010-01-31 23:35:00.png?raw=true "Spirals2.")
+![Alt text]('tests/spirals_2010-01-31 23:35:00.png'?raw=true "Spirals2.")
 
 Finally, the function
 ```
