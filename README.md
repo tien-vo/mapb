@@ -53,4 +53,31 @@ Similarly, for STEREO B,
 ```
 data.plot_time_series("B", save=True)
 ```
-![Alt text](tests/stb_time_series.png?raw=true "Time series loaded from STA.")
+![Alt text](tests/stb_time_series.png?raw=true "Time series loaded from STB.")
+
+We can also plot the footprints on an inertial longitude vs. latitude (HEEQ) 
+coordinates. Potentially, this can be combined with EUVI images (will be
+implemented).
+```
+data.plot_footprints(save=True)
+```
+![Alt text](tests/footprints.png?raw=true "Parker spiral footprints.")
+
+Also, we can plot the spiral at a given time in the xy plane (default to the
+starting point in the time range if not specified).
+```
+data.plot_spirals(save=True)
+```
+![Alt text](tests/spirals_2010-01-01 05:00:00.png?raw=true "Spirals1.")
+
+Or, if specified, the string has to be in %Y-%m-%dT%H:%M:%S format.
+```
+data.plot_spirals(time="2010-02-01T01:00:00", save=True)
+```
+![Alt text](tests/spirals_2010-01-31 23:35:00.png?raw=true "Spirals2.")
+
+Finally, the function
+```
+data.show()
+```
+shows the created plots if using the package interactively.
