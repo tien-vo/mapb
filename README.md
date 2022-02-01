@@ -81,3 +81,6 @@ Finally, the function
 data.show()
 ```
 shows the created plots if using the package interactively.
+
+Raw data can also be accessed through the `data` and `attrs` attributes of the
+instance `data`. Refer to [this link](https://cdaweb.gsfc.nasa.gov/misc/NotesS.html#STA_L2_MAGPLASMA_1M) to learn more about the data sources.
